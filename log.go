@@ -73,6 +73,7 @@ var Info = log.Info
 var Notice = log.Notice
 var Warning = log.Warning
 var Error = log.Error
+var Fatal = log.Fatal
 var Critical = log.Critical
 
 var Printf = log.Debugf
@@ -81,4 +82,5 @@ var Infof = log.Infof
 var Noticef = log.Noticef
 var Warningf = log.Warningf
 var Errorf = log.Errorf
+var Fatalf = log.Fatalf
 var Criticalf = log.Criticalf
