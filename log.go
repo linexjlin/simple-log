@@ -9,11 +9,11 @@ import (
 var log = logging.MustGetLogger("")
 var debug bool
 var formatConsole = logging.MustStringFormatter(
-	`%{color}%{id:004d} %{time:15:04:05.000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{color:reset} %{message}`,
+	`%{color}%{id:004d} %{time:15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{color:reset} %{message}`,
 )
 
 var formatFile = logging.MustStringFormatter(
-	`%{id:004d} %{time:15:04:05.000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{message}`,
+	`%{id:004d} %{time:15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{message}`,
 )
 
 var console logging.Backend
@@ -49,7 +49,7 @@ func LogToFile(path string) {
 	}
 	filePath = path
 	var err error
-	f, err = os.OpenFile("foo.txt", os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0660)
+	f, err = os.OpenFile(filePath, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0660)
 	if err != nil {
 		log.Warning(err)
 	}

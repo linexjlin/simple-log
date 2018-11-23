@@ -1,6 +1,0 @@
-0006 17:23:18.521  testing.go:827 tRunner ▶ DEBU debug
-0007 17:23:18.521  testing.go:827 tRunner ▶ INFO info
-0008 17:23:18.521  testing.go:827 tRunner ▶ NOTI notice
-0009 17:23:18.521  testing.go:827 tRunner ▶ WARN warning
-0010 17:23:18.521  testing.go:827 tRunner ▶ ERRO error
-0011 17:23:18.521  testing.go:827 tRunner ▶ CRIT Critical
