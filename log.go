@@ -75,6 +75,7 @@ var Warning = log.Warning
 var Error = log.Error
 var Fatal = log.Fatal
 var Critical = log.Critical
+var Panic = log.Panic
 
 var Printf = log.Debugf
 var Debugf = log.Debugf
@@ -84,3 +85,4 @@ var Warningf = log.Warningf
 var Errorf = log.Errorf
 var Fatalf = log.Fatalf
 var Criticalf = log.Criticalf
+var Panicf = log.Panicf
