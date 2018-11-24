@@ -2,6 +2,7 @@ package log
 
 import (
 	"testing"
+	"time"
 )
 
 func TestInit(t *testing.T) {
@@ -22,4 +23,15 @@ func TestLogToFile(t *testing.T) {
 	log.Warning("warning")
 	log.Error("error")
 	log.Critical("Critical")
+}
+
+func TestLogToWebsocket(t *testing.T) {
+	go func() {
+		for {
+			log.Info("1")
+			time.Sleep(time.Second * 2)
+		}
+	}()
+	LogToWs(":8034", "/ws")
+	select {}
 }
