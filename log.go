@@ -84,13 +84,14 @@ func LogToWs(addr, path string) {
 	//ws := logging.NewBackendFormatter(websocket, formatFile)
 	bks.Add(websocket)
 	go func() {
-		http.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
+		mux := http.NewServeMux()
+		mux.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
 			//allow cros
 			r.Header["Origin"] = []string{}
 			websocket.ServeHTTP(w, r)
 
 		})
-		http.ListenAndServe(addr, nil)
+		http.ListenAndServe(addr, mux)
 	}()
 }
 
