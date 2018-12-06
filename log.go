@@ -10,13 +10,13 @@ import (
 )
 
 var log = logging.MustGetLogger("")
-var debug bool
+var debug = true
 var formatConsole = logging.MustStringFormatter(
-	`%{color}%{id:004d} %{time:15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{color:reset} %{message}`,
+	`%{color}%{id:004d} %{time:2006-01-02 15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{color:reset} %{message}`,
 )
 
 var formatFile = logging.MustStringFormatter(
-	`%{id:004d} %{time:15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{message}`,
+	`%{id:004d} %{time:2006-01-02 15:04:05.0000000} %{module} %{shortfile} %{longfunc} ▶ %{level:.4s} %{message}`,
 )
 
 var ws logging.Backend
